@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- User Story #1: As a user, I want to see a title with id="title" in H1 sized text.
+    User Story #2: As a user, I want to see a short explanation with id="description" in P sized text.
+    User Story #3: As a user, I want to see a form with id="survey-form".
+    User Story #4: As a user, I want to be required to enter my name in a field with id="name". (Inside form element)
+    User Story #5: As a user, I want to be required to enter an email in a field with id="email". (Inside form element)
+    User Story #6: As a user, I want to see a validation error if I enter an email that is not formatted correctly.
+    User Story #7: As a user, I should be able to enter a number in a field with id="number".
+    User Story #8: As a user, if I enter non-numbers in the number input, I want to see an HTML5 validation error.
+    User Story #9: As a user, if I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+    User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+    User Story #11: For the name, email, and number input fields, I want to see placeholder text that gives me a description or instructions for each field.
+    User Story #12: Inside the form element, I want a select an option from a dropdown that has a corresponding id="dropdown".
+    User Story #13: Inside the form element, I want to select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+    User Story #14: Inside the form element, I want to select several fields from a series of checkboxes, each of which must have a value attribute.
+    User Story #15: Inside the form element, I want to see a text-area at the end for additional comments.
+    User Story #16: Inside the form element, I want to see a button with id="submit" to submit all my inputs. -->
+
+
+    <div class="container">
+        <div class="form">
+            <div id="img-div">
+                <img src="./assets/vehicle.svg" alt="" width="100%" height="100%">
+            </div>
+
+            <form action="index.html" method="GET" id="survey-form">
+                <h2 id="title">School Transport Survey</h2>
+                <p id="description">Just a simple survey</p>
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" class="field" id="name" required placeholder="Name">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" class="field" id="email" required placeholder="Email">
+                <label for="number" id="number">Age</label>
+                <input type="number" name="age" class="field" id="number" pattern="\d*" min="18" max="90" required>
+                <label for="gender">Gender</label>
+                <select name="gender" id="dropdown" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <p>Have you ever used any transportation services provided for students?</p>
+                <div id="radio">
+                    <label for="yes" id="radioLabel">Yes</label>
+                    <input type="radio" name="transpo" id="yes" value="yes">
+                    <label for="no" id="radioLabel">No</label>
+                    <input type="radio" name="transpo" id="no" value="no">
+                </div>
+                <p>What forms of public transportation do you take?</p>
+                <div class="check">
+                    <div>
+                        <input type="checkbox" name="bus" id="bus" value="Bus">
+                        <label for="bus">Bus</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="jeep" id="jeep" value="Jeep">
+                        <label for="jeep">Jeep</label>
+
+                    </div>
+                    <div>
+
+                        <input type="checkbox" name="tricycle" id="tricycle" value="Tricycle">
+                        <label for="tricycle">Tricycle</label>
+                    </div>
+                    <div>
+
+                        <input type="checkbox" name="taxi" id="taxi" value="Taxi">
+                        <label for="taxi">Taxi</label>
+                    </div>
+
+                </div>
+                <label for="notes" id="notes">Provide a reason why you use this form of transport</label>
+                <textarea name="notes" id="" cols="30" rows="5" required></textarea>
+                <div class="btn-container">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

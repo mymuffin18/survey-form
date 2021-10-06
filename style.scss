@@ -52,7 +52,7 @@ body {
 		p {
 			font-size: 15px;
 			margin-bottom: 5px;
-			display: inline-block;
+			display: block;
 			color: $labelColor;
 			font-weight: 300;
 		}
@@ -86,10 +86,12 @@ body {
 			}
 
 			textarea {
+				display: block;
 				color: $labelColor;
 				border: 2px solid $labelColor;
 				padding: 1em;
 				outline: none;
+				resize: none;
 				width: 100%;
 				border-radius: 10px;
 			}
